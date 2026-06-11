@@ -1,0 +1,58 @@
+@keyframes progress-stripes {
+  0%   { background-position: 0 0; }
+  100% { background-position: 40px 0; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(1); box-shadow: 4px 4px 0px #0A0A0A; }
+  50%  { transform: scale(1.06); box-shadow: 6px 6px 0px #0A0A0A; }
+  100% { transform: scale(1); box-shadow: 4px 4px 0px #0A0A0A; }
+}
+
+@keyframes grid-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+.streaming-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: var(--color-text-primary);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink-cursor 0.7s step-end infinite;
+}
+
+.progress-bar-fill {
+  background-image: repeating-linear-gradient(
+    45deg, #FFE500, #FFE500 10px, #FFCC00 10px, #FFCC00 20px
+  );
+  background-size: 40px 100%;
+  animation: progress-stripes 0.8s linear infinite;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #E8E2D4 25%, #F5EFE0 50%, #E8E2D4 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.scroll-btn-pulse { animation: pulse-ring 1.5s ease-in-out infinite; }
+
+.landing-grid-bg {
+  background-image: radial-gradient(circle, #0A0A0A 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: grid-drift 8s linear infinite;
+  opacity: 0.08;
+}
