@@ -1,1 +1,16 @@
 Planning docs/
+node_modules/
+.env
+.env.local
+Backend/.env.example
+vector_store/
+dist/
+build/
+.cache/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.log
+npm-debug.log*
